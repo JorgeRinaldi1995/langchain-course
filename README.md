@@ -1,16 +1,12 @@
 
 ## Conteúdo
 
-
-
-
-
-- 01. Aplicações de IA com Langchain
+- I. Aplicações de IA com Langchain
    - O que é Langchain?
    - Por que Langchain?
    - Estrutura do Curso
    - O que você ganhará com este curso?
-- 02. Models - Acessando modelos de linguagem
+- II. Models - Acessando modelos de linguagem
    - LLMs (Large Language Models)
       - Como interagir com um LLM?
       - Chamadas simultâneas
@@ -18,13 +14,13 @@
       - Estrutura de um ChatModel
       - Tipos de Mensagens
       - Streaming de Mensagens
-- 03. Models - Conceitos Avançados
+- III. Models - Conceitos Avançados
    - Prompt Few-Shot
    - Utilizando Outros Modelos
    - Caching
       - Cache em Memória
       - Cache SQLite
-- 04. Prompt Templates - Criando prompts para aplicações robustas
+- IV. Prompt Templates - Criando prompts para aplicações robustas
    - O que são Prompt Templates?
       - Exemplo Básico de Prompt Template
       - Partial Variables para Valores Default
@@ -33,7 +29,7 @@
    - Few-shot Prompting
       - Few-shot Prompting Utilizando LLMs
       - Few-shot Prompting Utilizando ChatModels
-- 05. Output Parsers - Formatando saídas
+- V. Output Parsers - Formatando saídas
    - O que é um Output Parser?
       - Por que usar Output Parsers?
    - Estruturando saídas de chat - StrOutputParser
@@ -47,7 +43,7 @@
       - Um exemplo mais prático
       - Implementação
    - Desafio de OutputParser
-- 06. Chains - Encadeamento com Langchain
+- VI. Chains - Encadeamento com Langchain
    - O que são Chains?
    - O que é LCEL?
    - Criando sua Primeira Chain com LCEL
@@ -56,10 +52,10 @@
    - Entendendo a ordem correta
    - Chains Clássicas vs. LCEL
    - Praticando com Chains
-- 07. Criando Chains mais complexas e observando com LangSmith
+- VII. Criando Chains mais complexas e observando com LangSmith
    - Somando chains
    - Como entender o que está acontecendo?
-- 08. Runnables - As estruturas básicas de uma Chain
+- VIII. Runnables - As estruturas básicas de uma Chain
    - O que são Runnables?
    - Métodos dos Runnables de LCEL
       - Exemplo de criação de uma Chain
@@ -72,7 +68,7 @@
       - RunnablePassthrough
       - RunnableLambda
       - RunnableParallel
-- 09 - Roteamento - Trabalhando com seleção de Chains
+- IX - Roteamento - Trabalhando com seleção de Chains
    - Criando Estruturas de Roteamento
       - Categorizador de Perguntas
       - Criando a Estrutura de Roteamento
@@ -80,7 +76,7 @@
       - Invocando a Chain de Roteamento
       - Exemplo de Pergunta de Matemática
    - Mas a pergunta está sendo direcionada para a Chain correta?
-- 10. Memory - Adicionando memória à conversa com o modelo
+- X. Memory - Adicionando memória à conversa com o modelo
    - O que é a memória em LangChain?
    - Métodos das classes de memória
       - Exemplo de Uso da Memória
@@ -88,7 +84,7 @@
       - Integrando Memória à Chain
       - Interagindo com a Chain
       - Memória em Diferentes Sessões
-- 11. RAG - Introdução à técnica Retrieval Augmented Generation
+- XI. RAG - Introdução à técnica Retrieval Augmented Generation
    - O que é RAG?
    - Desafios ao Utilizar RAG
    - Quebrando RAG em etapas
@@ -101,7 +97,7 @@
       - O que é Fine Tuning?
       - Comparação entre RAG e Fine Tuning
    - Quando usar cada técnica
-- 12. Document Loaders - Carregando dados com Langchain
+- XII. Document Loaders - Carregando dados com Langchain
    - O que são Document Loaders?
       - Tipos de Documentos
    - Carregando Diferentes Tipos de Documentos
@@ -112,7 +108,7 @@
    - Documentsde LangChain
    - Passos para Criar um Document Loader Customizado
    - Exemplo Completo
-- 13. Text Splitters - Dividindo texto em trechos
+- XIII. Text Splitters - Dividindo texto em trechos
    - O que é Text Splitting?
       - Por que é importante realizar uma boa quebra de dados?
    - Parâmetros de um Text Splitter
@@ -121,13 +117,13 @@
       - RecursiveCharacterTextSplitter
       - TokenTextSplitter
       - MarkdownHeaderTextSplitter
-- 14. Embeddings - Transformando texto em vetores
+- XIV. Embeddings - Transformando texto em vetores
    - O que são Embeddings?
    - Como os Embeddings são criados?
       - Exemplo Prático com OpenAI
       - Análise de Similaridade
       - Embedding com HuggingFace
-- 15. VectorStores - Criando uma base de dados de vetores
+- XV. VectorStores - Criando uma base de dados de vetores
    - O que é uma VectorStore?
    - Utilizando Chroma para criar uma VectorStore
       - Carregamento de Documentos
@@ -139,14 +135,14 @@
       - Busca por Similaridade
       - Salvando a VectorStore FAISS
       - Carregando a VectorStore FAISS
-- 16. Retrieval - Encontrando trechos relevantes
+- XVI. Retrieval - Encontrando trechos relevantes
    - O que é Retrieval?
    - Semantic Search
       - Limitações do Semantic Search
    - Max Marginal Relevance (MMR)
    - Filtragem Avançada
    - LLM Aided Retrieval
-- 17. RAG - Conversando com os seus dados
+- XVII. RAG - Conversando com os seus dados
    - Pipeline completo de RAG
       - Carregamento e dividindo documentos
       - Criação da base de dados de vetores
@@ -258,14 +254,19 @@
 
 #### turbo-instruct:
 
+```
 **from** langchain_openai **import** OpenAI
 
 llm = OpenAI(model='gpt-3.5-turbo-instruct')
 
+```
+
 #### Agora, vamos fazer uma chamada básica ao modelo utilizando o métodoinvoke:
 
+```
 pergunta ='Conte uma história breve sobre a jornada de aprender a programar'
 print(llm.invoke(pergunta))
+```
 
 #### "'\\n\\nEra uma vez um jovem chamado Lucas que sempre teve interesse em tecnologia e computadores. Desde criança, ele ficava fascinado ao ver seus pais trabalhando em seus laptops e sonhava em um dia poder criar suas próprias ferramentas digitais. Apesar disso, Lucas nunca teve acesso a cursos ou aulas de programação, pois sua família não tinha condições de pagar por isso.\\n\\nMas, determinado a aprender, Lucas começou a ler livros e artigos sobre programação na internet. No começo, tudo parecia muito confuso e complexo, mas ele não desistiu. Com muita dedicação e paciência, foi aprendendo os conceitos básicos de lógica de programação e linguagens de codificação.\\n\\nCom o passar do tempo, Lucas começou a praticar seus conhecimentos criando pequenos projetos pessoais, como uma calculadora simples e um jogo de adivinhação. Cada vez que conseguia fazer algo funcionar, sentia uma alegria imensa e uma sensação de realização.\\n\\nMas a jornada de aprender a programar não foi fácil. Lucas enfrentou muitos obstáculos'"
 
@@ -273,8 +274,10 @@ print(llm.invoke(pergunta))
 
 #### modelo? Podemos usar o métodostream:
 
+```
 **for** trecho **in** llm.stream(pergunta):
 print(trecho, end='')
+```
 
 #### Desta forma, o texto assim que gerado pelo modelo já é enviado para nossa aplicação, criando a mesma
 
@@ -287,10 +290,12 @@ print(trecho, end='')
 
 #### isso de forma eficiente com o métodobatch:
 
+```
 perguntas = ['O que é o céu?','O que é a terra?','O que são as estrelas?']
 respostas = llm.batch(perguntas)
 **for** resposta **in** respostas:
 print(resposta)
+```
 
 #### ['\\n\\nO céu é o espaço acima da superfície da Terra, onde se encontram as nuvens, os planetas, as estrelas e outros corpos celestes. É também o lugar onde se acredita que as almas dos mortos encontram paz e felicidade eterna, de acordo com diversas religiões e crenças. Além disso, o céu também pode ser visto como um estado de espírito elevado, de paz e tranquilidade.',\n", " '\\n\\nA terra é o terceiro planeta do sistema solar, localizado a uma distância de aproximadamente 149,6 milhões de quilômetros do sol. É um planeta rochoso com uma atmosfera composta principalmente por nitrogênio e oxigênio, que sustenta a vida como a conhecemos. É o único planeta conhecido a abrigar vida em toda a sua diversidade, incluindo seres humanos. A terra é composta por vários elementos, incluindo água, rochas, ar, solo e vida. É também o lar de milhões de espécies de plantas, animais e microorganismos. Além disso, a terra é um sistema dinâmico, com movimentos tectônicos, ciclos climáticos e uma variedade de ecossistemas que interagem e se influenciam. ',\n", " '\\n\\nAs estrelas são corpos celestes que emitem luz e calor próprios. Elas são formadas por gases, principalmente hidrogênio e hélio, e estão em constante processo de fusão nuclear em seus núcleos, o que gera a energia que elas emitem. As estrelas também possuem diferentes tamanhos, cores e brilhos, e podem ser agrupadas em constelações no céu noturno. Elas desempenham um papel fundamental na formação e evolução do universo, influenciando a formação de planetas e sistemas solares.']
 
@@ -310,6 +315,7 @@ print(resposta)
 
 #### Veja como é fácil configurar e usar um ChatModel com o LangChain:
 
+```
 **from** langchain_openai **import** ChatOpenAI
 **from** langchain_core.messages **import** HumanMessage, SystemMessage
 
@@ -321,6 +327,7 @@ HumanMessage(content='Quanto é 1 + 1?')
 ]
 resposta = chat.invoke(mensagens)
 print(resposta.content)
+```
 
 #### Depende, você está pedindo a resposta matemática ou a resposta engraçada?
 
@@ -351,8 +358,10 @@ print(resposta.content)
 
 #### uma conversa real:
 
+```
 **for** trecho **in** chat.stream(mensagens):
 print(trecho.content, end='')
+```
 
 #### Como você viu, tanto os LLMs quanto os ChatModels são ferramentas poderosas que nos permitem
 
@@ -381,6 +390,7 @@ print(trecho.content, end='')
 
 #### Vejamos um exemplo prático utilizando oChatOpenAIda LangChain:
 
+```
 **from** langchain_openai **import** ChatOpenAI
 **from** langchain_core.messages **import** HumanMessage, AIMessage
 
@@ -395,6 +405,7 @@ HumanMessage(content='Quanto é 10 + 3?'),
 ]
 
 chat.invoke(mensagens)
+```
 
 #### Neste exemplo, alternamos entreHumanMessageeAIMessagepara treinar o modelo sobre como
 
@@ -414,6 +425,7 @@ chat.invoke(mensagens)
 
 #### Por exemplo, para usar um modelo da Hugging Face:
 
+```
 **from** langchain_community.chat_models.huggingface **import** ChatHuggingFace
 **from** langchain_community.llms.huggingface_endpoint **import** HuggingFaceEndpoint
 
@@ -431,6 +443,7 @@ HumanMessage(content='Quanto é 10 + 3?'),
 ]
 
 chat.invoke(mensagens)
+```
 
 #### Aqui,ChatHuggingFaceutilizaHuggingFaceEndpointpara interagir com um modelo especí-
 
@@ -450,6 +463,7 @@ chat.invoke(mensagens)
 
 #### Cache em Memória
 
+```
 **from** langchain.cache **import** InMemoryCache
 **from** langchain.globals **import** set_llm_cache
 **from** langchain_openai.chat_models **import** ChatOpenAI
@@ -464,7 +478,7 @@ HumanMessage(content='Quanto é 1 + 1?')
 
 chat.invoke(mensagens) # Primeira chamada, sem cache
 chat.invoke(mensagens) # Segunda chamada, com cache
-
+```
 
 #### Cache SQLite
 
@@ -472,6 +486,7 @@ chat.invoke(mensagens) # Segunda chamada, com cache
 
 #### excelente opção.
 
+```
 **from** langchain.cache **import** SQLiteCache
 **from** langchain.globals **import** set_llm_cache
 
@@ -479,6 +494,7 @@ set_llm_cache(SQLiteCache(database_path='arquivos/langchain_cache_db.sqlite'))
 
 chat.invoke(mensagens) # Primeira chamada, sem cache
 chat.invoke(mensagens) # Segunda chamada, com cache
+```
 
 #### Este capítulo avançado sobre modelos em LangChain mostra como podemos manipular, interagir e
 
@@ -515,6 +531,7 @@ chat.invoke(mensagens) # Segunda chamada, com cache
 
 #### Vamos começar com um exemplo simples usando o modelo LLM da OpenAI:
 
+```
 **from** langchain_openai.llms **import** OpenAI
 llm = OpenAI()
 
@@ -525,9 +542,13 @@ prompt_template = PromptTemplate.from_template('''
 Responda a seguinte pergunta do usuário:
 {pergunta}
 ''')
+```
 
 # Usando o Prompt Template
+
+```
 print(prompt_template.format(pergunta='O que é um buraco negro?'))
+```
 
 #### Responda a seguinte pergunta do usuário:
 
@@ -544,25 +565,34 @@ print(prompt_template.format(pergunta='O que é um buraco negro?'))
 
 #### ser substituídos quando necessário:
 
+```
 prompt_template = PromptTemplate.from_template('''
 Responda a seguinte pergunta do usuário em até {n_palavras} palavras:
 {pergunta}
 ''', partial_variables={'n_palavras': 10})
+```
 
 # Formatando com a variável parcial
+```
 prompt_template.format(pergunta='O que é um buraco negro?')
+```
 
 #### '\nResponda a seguinte pergunta do usuário em até 10 palavras:\nO que é um buraco negro? \n'
 
 #### Se quiséssemos modificar o valor padrão, seria só informar este valor ao formatar o prompt:
 
+```
 prompt_template = PromptTemplate.from_template('''
 Responda a seguinte pergunta do usuário em até {n_palavras} palavras:
 {pergunta}
 ''', partial_variables={'n_palavras': 10})
+```
 
 # Formatando com a variável parcial
+
+```
 prompt_template.format(n_palavras=5, pergunta='O que é um buraco negro?')
+```
 
 #### '\nResponda a seguinte pergunta do usuário em até 5 palavras:\nO que é um buraco negro? \n'
 
@@ -570,6 +600,7 @@ prompt_template.format(n_palavras=5, pergunta='O que é um buraco negro?')
 
 #### Além disso, podemos compor múltiplos Prompt Templates para criar prompts mais complexos:
 
+```
 **from** langchain.prompts **import** PromptTemplate
 
 template_word_count = PromptTemplate.from_template('Responda a pergunta em até {n_palavras}
@@ -585,6 +616,7 @@ template_word_count
 prompt = template_final.format(n_palavras=10, lingua='inglês', pergunta='O que é uma
 _↪_ → estrela?')
 llm.invoke(prompt)
+```
 
 #### '\n\nA star is a luminous ball of gas.'
 
@@ -595,10 +627,12 @@ llm.invoke(prompt)
 
 #### formato de mensagens:
 
+```
 **from** langchain.prompts **import** ChatPromptTemplate
 
 chat_template = ChatPromptTemplate.from_template('Essa é a minha dúvida: {duvida}')
 chat_template.format_messages(duvida='Quem sou eu?')
+```
 
 #### [HumanMessage(content='Essa é a minha dúvida: Quem sou eu?')]
 
@@ -614,6 +648,7 @@ chat_template.format_messages(duvida='Quem sou eu?')
 
 #### de pensar para responder suas perguntas:
 
+```
 exemplos = [
 {"pergunta": "Quem viveu mais tempo, Muhammad Ali ou Alan Turing?",
 "resposta":
@@ -643,14 +678,15 @@ Resposta intermediária: A mãe de George Washington foi Mary Ball Washington.
 Pergunta de acompanhamento: Quem foi o pai de Mary Ball Washington?
 Resposta intermediária: O pai de Mary Ball Washington foi Joseph Ball.
 
-
 Então a resposta final é: Joseph Ball
 """,
 }
 ]
 
+```
 #### Few-shot Prompting Utilizando LLMs
 
+```
 **from** langchain.prompts.few_shot **import** FewShotPromptTemplate
 **from** langchain.prompts.prompt **import** PromptTemplate
 **from** langchain_openai.llms **import** OpenAI
@@ -670,9 +706,11 @@ input_variables=['input']
 )
 
 llm.invoke(few_shot_template.format(input='Quem fez mais gols, Romário ou Pelé?'))
+```
 
 #### Few-shot Prompting Utilizando ChatModels
 
+```
 **from** langchain.prompts.few_shot **import** FewShotChatMessagePromptTemplate
 **from** langchain.prompts **import** ChatPromptTemplate
 **from** langchain_openai.chat_models **import** ChatOpenAI
@@ -698,6 +736,7 @@ few_shot_template,
 
 
 llm.invoke(prompt_template.format(input='Quem fez mais gols, Romário ou Pelé?'))
+```
 
 #### Espero que este capítulo tenha esclarecido o conceito e a aplicação de Prompt Templates em suas
 
@@ -769,6 +808,7 @@ llm.invoke(prompt_template.format(input='Quem fez mais gols, Romário ou Pelé?'
 
 #### Exemplo de uso do StrOutputParser
 
+```
 **from** langchain.prompts **import** ChatPromptTemplate
 
 chat_template = ChatPromptTemplate.from_messages(
@@ -777,10 +817,11 @@ chat_template = ChatPromptTemplate.from_messages(
 ('human','{pergunta}')
 ]
 )
-
+```
 # Formatando a mensagem
+```
 chat_template.format_messages(nome_assistente='Asimo', pergunta='Qual o seu nome?')
-
+```
 #### A saída será:
 
 #### [SystemMessage(content='Você é um assistente engraçado e se chama Asimo', additional_kwargs={}, response_metadata={}),
@@ -789,10 +830,12 @@ chat_template.format_messages(nome_assistente='Asimo', pergunta='Qual o seu nome
 
 #### Agora, vamos invocar o modelo e obter a resposta:
 
+```
 **from** langchain_openai.chat_models **import** ChatOpenAI
 
 chat = ChatOpenAI()
 resposta = chat.invoke(prompt)
+```
 
 #### A resposta do modelo será:
 
@@ -802,10 +845,12 @@ resposta = chat.invoke(prompt)
 
 #### Para formatar a saída, utilizamos o StrOutputParser :
 
+```
 **from** langchain_core.output_parsers **import** StrOutputParser
 
 output_parser = StrOutputParser()
 output_parser.invoke(resposta)
+```
 
 #### A saída será:
 
@@ -815,10 +860,10 @@ output_parser.invoke(resposta)
 #### Dando um spoiler de chains
 
 #### Podemos encadear as operações utilizando o operador|:
-
+```
 chain = chat_template | chat | output_parser
 chain.invoke({'nome_assistente':'Asimo','pergunta':'Qual o seu nome?'})
-
+```
 #### A saída será:
 
 #### 'Olá! Meu nome é Asimo. Como posso te ajudar hoje?'
@@ -866,6 +911,7 @@ chain.invoke({'nome_assistente':'Asimo','pergunta':'Qual o seu nome?'})
 
 #### Exemplo com Pydantic
 
+```
 **from** typing **import** Optional
 **from** pydantic **import** BaseModel, Field
 
@@ -877,6 +923,7 @@ avaliacao: Optional[int] = Field(description='O quão engraçada é a piada de 1
 
 llm_estruturada = chat.with_structured_output(Piada)
 resposta = llm_estruturada.invoke('Conte uma piada sobre gatinhos')
+```
 
 #### A saída será:
 
@@ -894,14 +941,17 @@ resposta = llm_estruturada.invoke('Conte uma piada sobre gatinhos')
 
 #### modelo de dados Pydantic, permitindo que os dados sejam validados automaticamente.
 
+```
 **class** Piada(BaseModel):
+```
 
 #### A docstring (texto entre aspas triplas abaixo do nome da classe) que acompanha a classe descreve seu
 
 #### propósito, que é representar uma piada a ser contada ao usuário.
-
+```
 **class** Piada(BaseModel):
 """Piada para contar ao usuário"""
+```
 
 #### Dentro da classe, definimos três campos:introducao,punchlineeavaliacao. O campo
 
@@ -913,6 +963,7 @@ resposta = llm_estruturada.invoke('Conte uma piada sobre gatinhos')
 
 #### uma string e representa a conclusão da piada.
 
+```
 **from** typing **import** Optional
 **from** pydantic **import** BaseModel, Field
 
@@ -920,7 +971,7 @@ resposta = llm_estruturada.invoke('Conte uma piada sobre gatinhos')
 """Piada para contar ao usuário"""
 introducao: str = Field(description='A introdução da piada')
 punchline: str = Field(description='A conclusão da piada')
-
+```
 
 #### Por fim, temos o campoavaliacao, que é do tipoOptional[int]. Isso significa que ele pode ser
 
@@ -930,11 +981,13 @@ punchline: str = Field(description='A conclusão da piada')
 
 #### espera nesse campo.
 
+```
 **class** Piada(BaseModel):
 """Piada para contar ao usuário"""
 introducao: str = Field(description='A introdução da piada')
 punchline: str = Field(description='A conclusão da piada')
 avaliacao: Optional[int] = Field(description='O quão engraçada é a piada de 1 a 10')
+```
 
 #### Um exemplo mais prático
 
@@ -954,13 +1007,14 @@ avaliacao: Optional[int] = Field(description='O quão engraçada é a piada de 1
 
 #### E eu quero que o modelo de linguagem processe esta review para estruturá-la no seguinte formato:
 
-##### {
-
+```
+{
 "presente": **true** ,
 "dias_entrega": 2,
 "percepcao_de_valor": ["um pouco mais caro do que os outros sopradores de folhas disponíveis
 _↪_ → no mercado"]
 }
+```
 
 #### Implementação
 
@@ -974,20 +1028,20 @@ nosso gramado. É um pouco mais caro do que os outros sopradores
 de folhas disponíveis no mercado, mas acho que vale a pena pelas
 características extras."""
 
+```
 **from** pydantic **import** BaseModel, Field
 
 **class** AvaliacaoReview(BaseModel):
 
-
-```
 """Avalia review do cliente"""
 presente: bool = Field(description='Verdadeiro se foi para presente e False se não foi')
 dias_entrega: int = Field(description='Quantos dias para entrega do produto')
 percepcao_valor: list[str] = Field(description='Extraia qualquer frase sobre o valor ou
 ↪ → preço do produto. Retorne uma lista.')
-```
+
 llm_estruturada = chat.with_structured_output(AvaliacaoReview)
 resposta = llm_estruturada.invoke(review_cliente)
+```
 
 #### A saída será:
 
@@ -1014,6 +1068,7 @@ resposta = llm_estruturada.invoke(review_cliente)
 #### • atendimento: cliente ficou satisfeito com o atendimento
 
 #### • satisfacao: satisfação geral do cliente com a compra
+
 
 review_cliente = """Este soprador de folhas é bastante incrível. Ele tem
 quatro configurações: sopro de vela, brisa suave, cidade ventosa
@@ -1072,31 +1127,33 @@ características extras."""
 
 #### configurar nosso ambiente e importar as bibliotecas necessárias:
 
+```
 **from** dotenv **import** load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 
 **from** langchain_openai **import** ChatOpenAI
 model = ChatOpenAI(model='gpt-3.5-turbo-0125')
+```
 
 #### Vamos criar a cadeia mais simples possível, composta de um prompt combinado a um modelo de
 
 #### linguagem. Para isso, importamos o promptTemplate:
 
-
+```
 **from** langchain_core.prompts **import** ChatPromptTemplate
 prompt = ChatPromptTemplate.from_template('Crie uma frase sobre o seguinte: {assunto}')
-
+```
 #### Agora, vamos compor nossa chain. A beleza da LCEL está na simplicidade com que podemos encadear
 
 #### diferentes componentes:
-
+```
 chain = prompt | model
-
+```
 #### Para invocar a chain com um exemplo prático, vamos usar:
-
+```
 response = chain.invoke({'assunto':'gatinhos'})
 print(response)
-
+```
 #### AIMessage(content='Os gatinhos são seres adoráveis que conseguem conquistar nossos corações com seu charme e fofura.', response_metadata={'token_usage': {'completion_tokens': 28, 'prompt_tokens': 19, 'total_tokens': 47}, 'model_name': 'gpt-3.5-turbo-0125', 'system_fingerprint': None, 'finish_reason': 'stop', 'logprobs': None}, id='run-b9e445f5-5ba9-4aea-9813-eda76880def5-0')
 
 #### Adicionando mais elementos à chain
@@ -1104,13 +1161,13 @@ print(response)
 #### Suponha que queremos apenas o texto da resposta, sem metadados adicionais. Podemos adicionar
 
 #### umoutput_parserà nossa chain:
-
+```
 **from** langchain_core.output_parsers **import** StrOutputParser
 output_parser = StrOutputParser()
 
 chain = prompt | model | output_parser
 print(chain.invoke({'assunto':'gatinhos'}))
-
+```
 #### '"Gatinhos são fofos, brincalhões e cheios de amor para dar."'
 
 #### E veja como é simples ir compondo nossa chain e adicionando novos elementos. Pense que após esta
@@ -1126,10 +1183,10 @@ print(chain.invoke({'assunto':'gatinhos'}))
 #### corretamente de um estágio para o outro. Por exemplo, inverter a ordem resultará em erro, pois cada
 
 #### componente espera um tipo específico de entrada.
-
+```
 chain = model | prompt | output_parser#ORDEM INCORRETA!
 chain.invoke({'assunto':'gatinhos'})#Invoke retornará um erro
-
+```
 
 ### Entendendo a ordem correta
 
@@ -1178,9 +1235,9 @@ chain.invoke({'assunto':'gatinhos'})#Invoke retornará um erro
 #### Você pode também verificar os tipos de entrada e saída utilizando os métodos input_schema e out-
 
 #### put_schema:
-
+```
 print(prompt.input_schema.schema_json(indent=4))
-
+```
 #### {
 
 #### "title": "PromptInput",
@@ -1207,7 +1264,7 @@ print(prompt.input_schema.schema_json(indent=4))
 #### Antes da LCEL, criar chains era mais complexo e menos intuitivo. Veja como seria com a abordagem
 
 #### clássica:
-
+```
 **from** langchain.chains.llm **import** LLMChain
 **from** langchain_openai.chat_models **import** ChatOpenAI
 **from** langchain_core.output_parsers **import** StrOutputParser
@@ -1219,7 +1276,7 @@ output_parser = StrOutputParser()
 
 chain = LLMChain(llm=model, prompt=prompt, output_parser=output_parser)
 print(chain.invoke({'assunto':'gatinhos'}))
-
+```
 #### Como você pode ver, a LCEL simplifica significativamente o processo de criação de chains, tornando
 
 #### seu código mais limpo e fácil de entender.
@@ -1256,31 +1313,31 @@ print(chain.invoke({'assunto':'gatinhos'}))
 #### gera uma curiosidade sobre um assunto e outra que cria uma história baseada nessa curiosidade.
 
 #### Primeiro, definimos a chain que gera uma curiosidade:
-
+```
 **from** langchain_openai **import** ChatOpenAI
 **from** langchain_core.output_parsers **import** StrOutputParser
 **from** langchain_core.prompts **import** ChatPromptTemplate
 
 prompt = ChatPromptTemplate.from_template('Fale uma curiosidade sobre o assunto: {assunto}')
 chain_curiosidade = prompt | ChatOpenAI() | StrOutputParser()
-
+```
 #### Em seguida, criamos a chain que gera uma história a partir de um fato curioso:
-
+```
 prompt = ChatPromptTemplate.from_template('Crie uma história sobre o seguinte fato curioso:
 _↪_ → {assunto}')
 chain_historia = prompt | ChatOpenAI() | StrOutputParser()
-
+```
 #### Agora, podemos combinar essas duas chains em uma única chain:
-
+```
 chain = chain_curiosidade | chain_historia
-
+```
 #### Ao invocar essa chain com um assunto específico, como “peixes”, obtemos um resultado que combina
 
 #### a curiosidade e a história gerada:
-
+```
 result = chain.invoke({'assunto':'peixes'})
 print(result)
-
+```
 #### Essa abordagem modular nos permite construir aplicações mais complexas e dinâmicas, aproveitando
 
 #### o poder dos modelos de linguagem de forma eficaz.
@@ -1382,6 +1439,7 @@ print(result)
 
 #### linguagem para gerar frases sobre um assunto específico:
 
+```
 **from** langchain_openai **import** ChatOpenAI
 **from** langchain_core.prompts **import** ChatPromptTemplate
 
@@ -1389,17 +1447,17 @@ model = ChatOpenAI()
 prompt = ChatPromptTemplate.from_template("Crie uma frase sobre o assunto: {assunto}")
 
 chain = prompt | model
-
+```
 
 #### Invoke
 
 #### O métodoinvokeé o método básico para inserir um input na Chain e receber uma resposta. Por
 
 #### exemplo, ao invocar a Chain com o assunto “cachorrinhos”, podemos obter uma resposta como esta:
-
+```
 response = chain.invoke({'assunto':'cachorrinhos'})
 print(response)
-
+```
 #### A saída será uma mensagem gerada pelo modelo, como:
 
 #### AIMessage(content='Cachorrinhos são seres adoráveis que trazem alegria e amor incondicional para nossas vidas.', ...)
@@ -1415,10 +1473,10 @@ print(response)
 #### Para receber uma saída conforme ela é gerada pelo modelo, utilizamos o métodostream. Isso permite
 
 #### que a resposta seja transmitida em tempo real:
-
+```
 **for** stream **in** chain.stream({'assunto':'cachorrinhos'}):
 print(stream.content, end='')
-
+```
 #### A saída será exibida à medida que é gerada, proporcionando uma experiência mais interativa.
 
 #### Batch
@@ -1426,11 +1484,11 @@ print(stream.content, end='')
 #### O métodobatché utilizado para fazer múltiplas requisições em paralelo. Isso é especialmente útil
 
 #### quando você precisa lidar com várias entradas ao mesmo tempo:
-
+```
 responses = chain.batch([{'assunto':'cachorrinhos'}, {'assunto':'gatinhos'}, {'assunto':
 _↪_ → 'cavalinhos'}])
 print(responses)
-
+```
 #### A saída será uma lista de mensagens geradas para cada um dos assuntos fornecidos.
 
 ### Runnables Assíncronos
@@ -1445,17 +1503,18 @@ print(responses)
 #### Ainvoke
 
 #### Oainvokeé a versão assíncrona doinvoke. Ele é usado para fazer chamadas assíncronas à Chain:
-
+```
 **import** asyncio
 
 **async def** processa_chain(input):
 resposta = **await** chain.ainvoke(input)
 **return** resposta
-
+```
 # Criando e esperando tarefas assíncronas
+```
 task1 = asyncio.create_task(processa_chain({'assunto':'gatinho'}))
 **await** task1
-
+```
 ### Runnables Especiais
 
 #### Existem diversos tipos de Runnables criados pelo LangChain que auxiliam a criar fluxos mais com-
@@ -1473,16 +1532,18 @@ task1 = asyncio.create_task(processa_chain({'assunto':'gatinho'}))
 #### função de identidade, mas é útil em cenários onde você deseja incluir lógica adicional ou manipular a
 
 #### entrada de alguma forma antes de passar adiante.
-
+```
 **from** langchain_core.runnables **import** RunnablePassthrough
-
+```
 # Criando um RunnablePassthrough
+```
 runnable = RunnablePassthrough()
-
+```
 # Invocando o runnable
+```
 resultado = runnable.invoke({'mensagem':'Olá, mundo!'})
 print(resultado) # Saída: {'mensagem':'Olá, mundo!'}
-
+```
 #### Neste exemplo, o RunnablePassthrough simplesmente retorna o dicionário recebido, permitindo que
 
 #### ele seja usado em um fluxo de trabalho onde a entrada precisa ser preservada.
@@ -1499,19 +1560,24 @@ print(resultado) # Saída: {'mensagem':'Olá, mundo!'}
 #### ser construído para funcionar de forma síncrona ou assíncrona, dependendo de como a função é
 
 #### definida.
-
+```
 **from** langchain_core.runnables **import** RunnableLambda
-
+```
 # Definindo uma função simples
+```
 **def** cumprimentar(nome):
 **return** f'Olá, {nome}!'
-
+```
 # Criando um RunnableLambda a partir da função
+```
 runnable_cumprimentar = RunnableLambda(cumprimentar)
-
+```
 # Invocando o RunnableLambda
+
+```
 resultado = runnable_cumprimentar.invoke('Maria')
 print(resultado) # Saída:'Olá, Maria!'
+```
 
 #### Neste exemplo, o RunnableLambda encapsula a função cumprimentar, permitindo que ela seja
 
@@ -1529,29 +1595,35 @@ print(resultado) # Saída:'Olá, Maria!'
 
 #### podem ser feitos em paralelo.
 
+```
 **from** langchain_core.runnables **import** RunnableLambda, RunnableParallel
+```
 
 # Definindo algumas funções simples
+```
 **def** adicionar_um(x):
 **return** x + 1
 
 **def** multiplicar_por_dois(x):
 **return** x * 2
-
+```
 # Criando Runnables a partir das funções
+```
 runnable_adicionar = RunnableLambda(adicionar_um)
 runnable_multiplicar = RunnableLambda(multiplicar_por_dois)
-
+```
 # Criando um RunnableParallel
+```
 runnable_paralelo = RunnableParallel(
 adicionar=runnable_adicionar,
 multiplicar=runnable_multiplicar
 )
-
+```
 # Invocando o RunnableParallel
+```
 resultado = runnable_paralelo.invoke({'x': 3})
 print(resultado) # Saída: {'adicionar': 4,'multiplicar': 6}
-
+```
 
 #### Neste exemplo, RunnableParallel executa as duas operações (adicionar_um e multiplicar_por_dois) ao
 
@@ -1598,6 +1670,7 @@ print(resultado) # Saída: {'adicionar': 4,'multiplicar': 6}
 
 #### uma dessas áreas do conhecimento:
 
+```
 **from** langchain_openai **import** ChatOpenAI
 **from** langchain_core.prompts **import** ChatPromptTemplate
 
@@ -1623,7 +1696,7 @@ chain_historia = prompt | model
 
 prompt = ChatPromptTemplate.from_template('''{pergunta}''')
 chain_generica = prompt | model
-
+```
 
 #### Categorizador de Perguntas
 
@@ -1631,6 +1704,7 @@ chain_generica = prompt | model
 
 #### de conhecimento da pergunta:
 
+```
 **from** pydantic **import** BaseModel, Field
 
 prompt = ChatPromptTemplate.from_template('Você deve categorizar a seguinte pergunta:
@@ -1644,11 +1718,11 @@ Deve ser "física", "matemática" ou "história". Caso não se encaixe em nenhum
 _↪_ → retorne "outra"')
 
 model_estruturado = prompt | model.with_structured_output(Categorizador)
-
+```
 #### Ao invocar o modelo com uma pergunta, ele retornará a categoria correspondente:
-
+```
 model_estruturado.invoke({'pergunta':'Quando foi a independência dos Estados Unidos?'})
-
+```
 #### A saída será:
 
 #### Categorizador(area_conhecimento='história')
@@ -1658,15 +1732,15 @@ model_estruturado.invoke({'pergunta':'Quando foi a independência dos Estados Un
 #### Agora, vamos criar a estrutura de roteamento que usará o categorizador para decidir qual chain deve
 
 #### ser invocada:
-
+```
 **from** langchain_core.runnables **import** RunnablePassthrough
 
 chain = RunnablePassthrough().assign(categoria=model_estruturado)
-
+```
 #### Ao invocar essa chain com uma pergunta, obteremos a categoria da pergunta:
-
+```
 chain.invoke({'pergunta':'Quando foi a independência dos Estados Unidos?'})
-
+```
 #### A saída será um dicionário que inclui a pergunta e sua categoria:
 
 #### {'pergunta': 'Quando foi a independência dos Estados Unidos?',
@@ -1679,7 +1753,7 @@ chain.invoke({'pergunta':'Quando foi a independência dos Estados Unidos?'})
 #### Agora, precisamos definir uma função que irá direcionar a pergunta para a chain apropriada com base
 
 #### na categoria identificada:
-
+```
 **def** route(input):
 **if** input['categoria'].area_conhecimento =='matemática':
 **return** chain_matematica
@@ -1688,32 +1762,30 @@ chain.invoke({'pergunta':'Quando foi a independência dos Estados Unidos?'})
 **if** input['categoria'].area_conhecimento =='história':
 **return** chain_historia
 **return** chain_generica
-
+```
 #### Invocando a Chain de Roteamento
 
 #### Por fim, podemos combinar a estrutura de roteamento com a chain de categorização:
-
+```
 chain = RunnablePassthrough().assign(categoria=model_estruturado) | route
 chain.invoke({'pergunta':'Quando foi a independência dos Estados Unidos?'})
-
+```
 #### A saída será uma resposta detalhada sobre a independência dos Estados Unidos, gerada pela chain de
 
 #### história.
-
+```
 AIMessage(content='Claro! A Independência dos Estados Unidos foi declarada no dia 4 de julho
 de 1776. Vamos entender melhor o contexto e a importância desse evento!\n\n### Contexto
 Histórico\n\n... (continua a resposta)')
-
-```
 ↪ →
 ↪ →
 ```
 #### Exemplo de Pergunta de Matemática
 
 #### Se invocarmos a chain com uma pergunta de matemática, como:
-
+```
 chain.invoke({'pergunta':'Quanto é 1 + 21?'})
-
+```
 #### A resposta será uma explicação detalhada sobre a soma, gerada pela chain de matemática.
 
 ### Mas a pergunta está sendo direcionada para a Chain correta?
@@ -1766,19 +1838,20 @@ chain.invoke({'pergunta':'Quanto é 1 + 21?'})
 
 #### Vamos começar criando uma instância deInMemoryChatMessageHistory:
 
+```
 **from** langchain_core.chat_history **import** InMemoryChatMessageHistory
 
 memory = InMemoryChatMessageHistory()
-
+```
 #### Agora, podemos adicionar mensagens de usuário e do modelo à memória:
-
+```
 memory.add_user_message('Olá, modelo!')
 memory.add_ai_message('Olá, user')
-
+```
 #### Para visualizar as mensagens armazenadas, podemos acessar o atributomessages:
-
+```
 memory.messages
-
+```
 #### A saída será uma lista de mensagens, incluindo as interações que acabamos de adicionar:
 
 #### [HumanMessage(content='Olá, modelo!', additional_kwargs={}, response_metadata={}),
@@ -1791,7 +1864,7 @@ memory.messages
 #### Agora, vamos criar uma chain que utiliza memória para manter o contexto da conversa. Primeiro,
 
 #### definimos um prompt que inclui um espaço reservado para a memória:
-
+```
 **from** langchain_openai.chat_models **import** ChatOpenAI
 **from** langchain_core.prompts **import** ChatPromptTemplate
 
@@ -1802,13 +1875,13 @@ _↪_ → didática."),
 ("human", "{pergunta}"),
 ])
 chain = prompt | ChatOpenAI()
-
+```
 #### Integrando Memória à Chain
 
 #### Para integrar a memória à chain, utilizamos a classeRunnableWithMessageHistory, que per-
 
 #### mite associar a chain a um histórico de mensagens:
-
+```
 **from** langchain_core.runnables.history **import** RunnableWithMessageHistory
 
 store = {}
@@ -1831,17 +1904,17 @@ history_messages_key='memoria'
 config = {'configurable': {'session_id':'usuaria_a'}
 resposta = chain_com_memoria.invoke({'pergunta':'O meu nome é Adriano'}, config=config)
 print(resposta)
-
+```
 #### A saída será uma resposta personalizada, reconhecendo o nome do usuário:
 
 #### AIMessage(content='Olá, Adriano! Como posso te ajudar hoje?', ...)
 
 
 #### Se fizermos uma nova pergunta, como:
-
+```
 resposta = chain_com_memoria.invoke({'pergunta':'Qual é o meu nome?'}, config=config)
 print(resposta)
-
+```
 #### A resposta será:
 
 #### AIMessage(content='Seu nome é Adriano. Como posso te ajudar, Adriano?', ...)
@@ -1849,11 +1922,11 @@ print(resposta)
 #### Memória em Diferentes Sessões
 
 #### Se mudarmos o ID da sessão, a memória não será compartilhada:
-
+```
 config = {'configurable': {'session_id':'usuaria_b'}
 resposta = chain_com_memoria.invoke({'pergunta':'Qual é o meu nome?'}, config=config)
 print(resposta)
-
+```
 #### A saída será:
 
 #### AIMessage(content='Desculpe, mas eu não tenho acesso a informações pessoais sobre os usuários. Como posso te ajudar com programação hoje?', ...)
@@ -2163,7 +2236,7 @@ print(resposta)
 #### Vamos começar com algo que todos conhecemos: PDFs. O Langchain utiliza uma biblioteca chamada
 
 #### PyPDFpara carregar PDFs. Veja como é simples:
-
+```
 **from** langchain_community.document_loaders.pdf **import** PyPDFLoader
 
 caminho ='caminho/para/seu/arquivo.pdf'
@@ -2173,11 +2246,11 @@ documentos = loader.load()
 
 print(f'Total de páginas carregadas: {len(documentos)}')
 print(documentos[0].page_content) # Mostra o conteúdo da primeira página
-
+```
 #### CSVs
 
 #### E que tal carregar dados de um arquivo CSV? Com o Langchain, isso também é super fácil:
-
+```
 **from** langchain_community.document_loaders.csv_loader **import** CSVLoader
 
 caminho ='caminho/para/seu/arquivo.csv'
@@ -2186,13 +2259,13 @@ documentos = loader.load()
 
 print(f'Total de linhas carregadas: {len(documentos)}')
 print(documentos[0].page_content) # Mostra o conteúdo da primeira linha
-
+```
 #### Dados da Internet
 
 #### YouTube Sim, você pode carregar dados diretamente do YouTube! Isso inclui baixar o áudio de
 
 #### vídeos e transcrevê-los usando o modelo Whisper da OpenAI:
-
+```
 **from** langchain_community.document_loaders.generic **import** GenericLoader
 **from** langchain_community.document_loaders.blob_loaders.youtube_audio **import** YoutubeAudioLoader
 **from** langchain.document_loaders.parsers **import** OpenAIWhisperParser
@@ -2206,7 +2279,7 @@ OpenAIWhisperParser()
 docs = loader.load()
 
 print(docs[0].page_content) # Mostra a transcrição do vídeo
-
+```
 #### Para você conseguir utilizar este código no sitema Windows, é necessário realizar o download ffmpeg e
 
 #### adicioná-lo junto do script que você está rodando:
@@ -2214,7 +2287,7 @@ print(docs[0].page_content) # Mostra a transcrição do vídeo
 #### Web Scraping Carregar dados de páginas web também é possível. Imagine coletar informações
 
 #### diretamente de um artigo de blog:
-
+```
 **from** langchain_community.document_loaders.web_base **import** WebBaseLoader
 
 url ='https://seu.site.com/artigo'
@@ -2223,13 +2296,13 @@ documentos = loader.load()
 
 print(documentos[0].page_content) # Mostra o conteúdo do artigo
 
-
+```
 #### Notion
 
 #### E para os fãs do Notion, sim, vocês também podem carregar dados diretamente de páginas do Notion
 
 #### exportadas:
-
+```
 **from** langchain_community.document_loaders.notion **import** NotionDirectoryLoader
 
 caminho ='caminho/para/diretório/notion'
@@ -2237,7 +2310,7 @@ loader = NotionDirectoryLoader(caminho)
 documentos = loader.load()
 
 print(documentos[0].page_content) # Mostra o conteúdo da primeira página do Notion
-
+```
 ### Documentsde LangChain
 
 #### Ao carregarmos dados utilizando um document loader, o LangChain armazena a informação em
@@ -2247,7 +2320,7 @@ print(documentos[0].page_content) # Mostra o conteúdo da primeira página do No
 #### que armazena o conteúdo no formato de texto; metadata , que armazena informaçoes referente a
 
 #### origem e característica do documento:
-
+```
 **from** langchain_community.document_loaders.pdf **import** PyPDFLoader
 
 caminho ='caminho/para/seu/arquivo.pdf'
@@ -2258,15 +2331,15 @@ print(f'Total de páginas carregadas: {len(documentos)}')
 
 documento = documentos[0]# Acessando o primeiro documento, pois o LangChain retorna sempre
 _↪_ → uma lista de documentos
-
+```
 #### Para visualizar o conteúdo do documento:
-
+```
 print(documento.page_content)
-
+```
 #### Para visualizar os metadados:
-
+```
 print(documento.metadata)
-
+```
 ### Passos para Criar um Document Loader Customizado
 
 #### O LangChain é flexível a ponto de permitir criar novos Document Loaders de forma personalizada, se
@@ -2277,28 +2350,33 @@ print(documento.metadata)
 
 #### LangChain que serão utilizados na criação do seu loader.
 
-
+```
 **from** langchain.document_loaders.base **import** BaseLoader
 **from** langchain.schema **import** Document
-
+```
 #### 2. Definir a Classe do Loader: Crie uma nova classe que herda de BaseLoader. Essa classe deve
 
 #### implementar o método load(). Neste caso, criamos um loader que cria um documento para cada
 
 #### linha de texto de um arquivo.
-
+```
 **class** MyCustomLoader(BaseLoader):
 **def** __init__(self, source):
 self.source = source # Fonte de dados, como um arquivo ou URL
 
-```
 def load(self):
+```
 # Lógica para carregar os dados da fonte
+```
 documents = []
+```
 # Exemplo: Carregar dados de um arquivo de texto
+```
 with open(self.source,'r') as file:
 content = file.read()
+```
 # Criar um documento com o conteúdo e metadados
+```
 documents.append(Document(page_content=content, metadata={"source": self.source}))
 return documents
 ```
@@ -2307,20 +2385,22 @@ return documents
 #### utilizá-la para carregar os dados.
 
 # Criar uma instância do loader
+```
 loader = MyCustomLoader('caminho/para/seu/arquivo.txt')
 documentos = loader.load()
-
+```
 # Verificar o conteúdo carregado
+```
 **for** doc **in** documentos:
 print(doc.page_content) # Exibir o conteúdo do documento
 print(doc.metadata) # Exibir os metadados do documento
-
+```
 ### Exemplo Completo
 
 #### Aqui está um exemplo completo de um Document Loader customizado que carrega dados de um
 
 #### arquivo de texto:
-
+```
 **from** langchain.document_loaders.base **import** BaseLoader
 **from** langchain.schema **import** Document
 
@@ -2328,26 +2408,25 @@ print(doc.metadata) # Exibir os metadados do documento
 **def** __init__(self, source):
 self.source = source # Fonte de dados, como um arquivo ou URL
 
-```
 def load(self):
 documents = []
 with open(self.source,'r') as file:
 content = file.read()
 documents.append(Document(page_content=content, metadata={"source": self.source}))
-```
 
-```
 return documents
 ```
 # Utilizando o Document Loader customizado
+```
 loader = MyCustomLoader('caminho/para/seu/arquivo.txt')
 documentos = loader.load()
-
+```
 # Exibindo o conteúdo e metadados
+```
 **for** doc **in** documentos:
 print(doc.page_content)
 print(doc.metadata)
-
+```
 #### Como vocês podem ver, os Document Loaders do Langchain são extremamente poderosos e versáteis,
 
 #### permitindo que você carregue quase qualquer tipo de dado que possa imaginar. Isso abre um mundo
@@ -2413,7 +2492,7 @@ print(doc.metadata)
 #### CharacterTextSplitter
 
 #### Este é o tipo mais básico de splitter, que divide o texto baseado no número de caracteres.
-
+```
 **from** langchain.textsplitters **import** CharacterTextSplitter
 
 char_splitter = CharacterTextSplitter(
@@ -2423,13 +2502,13 @@ separator='')
 texto = "Aqui vai um exemplo de texto que será dividido. Será que a divisão será boa?"
 splits = char_splitter.split_text(texto)
 print(splits)
-
+```
 #### RecursiveCharacterTextSplitter
 
 #### Um splitter mais avançado que permite múltiplos separadores, respeitando uma hierarquia de di-
 
 #### visão.
-
+```
 **from** langchain.textsplitters **import** RecursiveCharacterTextSplitter
 
 rec_splitter = RecursiveCharacterTextSplitter(
@@ -2439,28 +2518,29 @@ separators=['.',''])
 texto = "Aqui vai um exemplo de texto que será dividido. Será que a divisão será boa?"
 splits = rec_splitter.split_text(texto)
 print(splits)
-
+```
 #### TokenTextSplitter
 
 #### Este splitter considera tokens em vez de caracteres, o que é especialmente útil dado que muitos
 
 #### modelos de linguagem operam com tokens.
-
+```
 **from** langchain.textsplitters **import** TokenTextSplitter
 
 token_splitter = TokenTextSplitter(chunk_size=30, chunk_overlap=5)
 texto = "Aqui vai um exemplo de texto que será dividido. Será que a divisão será boa?"
 splits = token_splitter.split_text(texto)
 print(splits)
-
+```
 #### MarkdownHeaderTextSplitter
 
 #### Ideal para dividir documentos em markdown baseando-se nos cabeçalhos.
 
-
+```
 **from** langchain.textsplitters **import** MarkdownHeaderTextSplitter
 
 markdown_text ='''# Título do Markdown de exemplo
+```
 ## Capítulo 1
 Texto capítulo 1 e mais e mais texto.
 Continuamos no capítulo 1!
@@ -2471,7 +2551,7 @@ Continuamos no capítulo 2!
 ### Seção 3.1
 Texto capítulo 3 e mais e mais texto.
 Continuamos no capítulo 3!
-'''
+```
 header_to_split_on = [
 ('#','Header 1'),
 ('##','Header 2'),
@@ -2480,7 +2560,7 @@ header_to_split_on = [
 md_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=header_to_split_on)
 splits = md_splitter.split_text(markdown_text)
 print(splits)
-
+```
 #### Dominar o Text Splitting é essencial para preparar seus dados para processamento eficiente em
 
 #### modelos de linguagem. Com a escolha certa de um Text Splitter e a configuração adequada dos
@@ -2537,27 +2617,30 @@ print(splits)
 #### Vamos ver como isso funciona na prática com um exemplo usando o modelotext-embedding-ada-002
 
 #### da OpenAI.
-
+```
 **from** langchain_openai **import** OpenAIEmbeddings
-
+```
 # Inicializando o modelo de embeddings
+```
 embedding_model = OpenAIEmbeddings(model='text-embedding-ada-002')
-
+```
 # Lista de textos para transformar em embeddings
 
-
+```
 textos = [
 'Eu gosto de cachorros',
 'Eu gosto de animais',
 'O tempo está ruim lá fora'
 ]
-
+```
 # Gerando embeddings para os documentos
+```
 embeddings = embedding_model.embed_documents(textos)
-
+```
 # Exibindo o tamanho e os primeiros elementos do primeiro embedding
+```
 print(len(embeddings[0]), embeddings[0][:10])
-
+```
 #### Análise de Similaridade
 
 #### Após obter os embeddings, podemos calcular a similaridade entre eles usando o produto escalar (dot
@@ -2565,40 +2648,45 @@ print(len(embeddings[0]), embeddings[0][:10])
 #### product). Textos semanticamente mais próximos terão um produto escalar maior, indicando maior
 
 #### proximidade no espaço vetorial.
-
+```
 **import** numpy **as** np
-
+```
 # Calculando a similaridade entre o primeiro e o segundo texto
+```
 similarity = np.dot(embeddings[0], embeddings[1])
 print(f"Similaridade: {similarity}")
-
+```
 #### Embedding com HuggingFace
 
 #### Também podemos usar modelos da Hugging Face para obter embeddings. Aqui está um exemplo
 
 #### usando o modeloall-MiniLM-L6-v2:
-
+```
 **from** langchain_community.embeddings.huggingface **import** HuggingFaceBgeEmbeddings
-
+```
 # Inicializando o modelo de embeddings da Hugging Face
+```
 hf_embedding_model = HuggingFaceBgeEmbeddings(model_name='all-MiniLM-L6-v2')
-
+```
 # Lista de textos para transformar em embeddings
+```
 textos = [
 'Eu gosto de cachorros',
 'Eu gosto de animais',
 'O tempo está ruim lá fora'
 ]
-
+```
 # Gerando embeddings
+```
 hf_embeddings = hf_embedding_model.embed_documents(textos)
-
+```
 # Calculando similaridades
+```
 **for** i **in** range(len(hf_embeddings)):
 **for** j **in** range(len(hf_embeddings)):
 print(round(np.dot(hf_embeddings[i], hf_embeddings[j]), 2), end='|')
 print()
-
+```
 
 #### Embeddings são uma ferramenta poderosa no mundo da IA, especialmente para aplicações que
 
@@ -2649,18 +2737,19 @@ print()
 
 #### dings.
 
+```
 **from** langchain_community.document_loaders.pdf **import** PyPDFLoader
 
 caminho = "arquivos/Explorando o Universo das IAs com Hugging Face.pdf"
 loader = PyPDFLoader(caminho)
 paginas = loader.load()
-
+```
 #### Divisão de Texto (Text Splitting)
 
 #### Após carregar os documentos, dividimos o texto em pedaços menores (chunks) que serão convertidos
 
 #### em vetores.
-
+```
 **from** langchain_text_splitters **import** RecursiveCharacterTextSplitter
 
 recur_split = RecursiveCharacterTextSplitter(
@@ -2672,11 +2761,11 @@ separators=["\n\n", "\n", ".", " ", ""]
 )
 
 documents = recur_split.split_documents(paginas)
-
+```
 #### Criando a VectorStore com Chroma
 
 #### Agora, vamos criar a VectorStore usando a Chroma, especificando onde os vetores serão persistidos.
-
+```
 **from** langchain_openai **import** OpenAIEmbeddings
 **from** langchain_chroma **import** Chroma
 
@@ -2688,20 +2777,20 @@ documents=documents,
 embedding=embeddings_model,
 persist_directory=diretorio
 )
-
+```
 #### Buscando Informações
 
 #### Para buscar informações relacionadas a uma consulta, primeiro convertemos a consulta em um vetor
 
 #### e depois realizamos uma busca por similaridade.
-
+```
 pergunta ='O que é o Hugging Face?'
 docs = vectorstore.similarity_search(pergunta, k=5)
 
 **for** doc **in** docs:
 print(doc.page_content)
 print(f'====== {doc.metadata}\n\n')
-
+```
 ### Utilizando FAISS para criar uma VectorStore
 
 #### FAISS, desenvolvido pelo Facebook AI, é outra opção popular para criar VectorStores eficientes.
@@ -2709,7 +2798,7 @@ print(f'====== {doc.metadata}\n\n')
 #### Criando a VectorStore com FAISS
 
 #### O processo é similar ao usado com a Chroma, mas usamos a biblioteca FAISS.
-
+```
 **from** langchain_community.vectorstores.faiss **import** FAISS
 
 vectorstore = FAISS.from_documents(
@@ -2718,31 +2807,31 @@ vectorstore = FAISS.from_documents(
 documents=documents,
 embedding=embeddings_model
 )
-
+```
 #### Busca por Similaridade
 
 #### Assim como com a Chroma, realizamos buscas por similaridade para encontrar os documentos mais
 
 #### relevantes.
-
+```
 docs = vectorstore.similarity_search(pergunta, k=5)
 
 **for** doc **in** docs:
 print(doc.page_content)
 print(f'====== {doc.metadata}\n\n')
-
+```
 #### Salvando a VectorStore FAISS
-
+```
 vectorstore.save_local('arquivos/faiss_bd')
-
+```
 #### Carregando a VectorStore FAISS
-
+```
 vectorstore = FAISS.load_local(
 'arquivos/faiss_bd',
 embeddings=embeddings_model,
 allow_dangerous_deserialization=True
 )
-
+```
 #### Espero que este capítulo tenha esclarecido como trabalhar com VectorStores e como elas são essenciais
 
 #### para aplicações de IA que envolvem o processamento de grandes volumes de texto. No próximo
@@ -2775,11 +2864,12 @@ allow_dangerous_deserialization=True
 #### A busca semântica é a forma mais direta de retrieval. Ela compara a semelhança entre a query (pergunta
 
 #### do usuário) e os documentos na VectorStore. Vamos ver um exemplo de como isso é implementado:
-
+```
 **from** langchain_openai **import** OpenAIEmbeddings
 **from** langchain_community.vectorstores.chroma **import** Chroma
-
+```
 # Supondo que'documents'são os documentos já processados e prontos para serem inseridos na
+```
 _↪_ → VectorStore
 embeddings_model = OpenAIEmbeddings()
 vectordb = Chroma.from_documents(documents, embedding=embeddings_model)
@@ -2789,7 +2879,7 @@ docs = vectordb.similarity_search(pergunta, k=3)
 **for** doc **in** docs:
 print(doc.page_content)
 print(f'==========={doc.metadata}\n\n')
-
+```
 #### Limitações do Semantic Search
 
 #### Embora útil, a Semantic Search tem limitações, especialmente quando há trechos muito similares ou
@@ -2802,12 +2892,12 @@ print(f'==========={doc.metadata}\n\n')
 
 #### mas também diversidade entre os trechos recuperados.
 
-
+```
 docs = vectordb.max_marginal_relevance_search(pergunta, k=3, fetch_k=10)
 **for** doc **in** docs:
 print(doc.page_content)
 print(f'==========={doc.metadata}\n\n')
-
+```
 #### O parâmetro fetch_k representa uma busca semântica inicial. Ao utilizarmos o valor de dez como no
 
 #### exemplo, estamos fazendo uma busca semântica simples e encontrando os dez trechos mais próximos
@@ -2825,7 +2915,7 @@ print(f'==========={doc.metadata}\n\n')
 #### Podemos também aplicar filtros para refinar os resultados de busca, como buscar apenas em fontes
 
 #### específicas ou páginas específicas.
-
+```
 docs = vectordb.similarity_search(
 pergunta,
 k=3,
@@ -2837,13 +2927,13 @@ filter={'$and':
 **for** doc **in** docs:
 print(doc.page_content)
 print(f'==========={doc.metadata}\n\n')
-
+```
 ### LLM Aided Retrieval
 
 #### Por fim, uma técnica avançada é o LLM Aided Retrieval, que utiliza modelos de linguagem para ajudar
 
 #### na criação de filtros de busca de forma dinâmica.
-
+```
 **from** langchain_openai.llms **import** OpenAI
 **from** langchain.retrievers.self_query.base **import** SelfQueryRetriever
 **from** langchain.chains.query_constructor.schema **import** AttributeInfo
@@ -2860,13 +2950,13 @@ type='string'
 
 ##### ),
 
-```
+
 AttributeInfo(
 name='page',
 description='A página da apostila de onde o texto se origina',
 type='integer'
 ),
-```
+
 ##### ]
 
 document_description ='Apostilas de cursos'
@@ -2878,7 +2968,7 @@ docs = retriever.get_relevant_documents(pergunta)
 **for** doc **in** docs:
 print(doc.page_content)
 print(f'==========={doc.metadata}\n\n')
-
+```
 #### Espero que este capítulo tenha esclarecido como o Retrieval funciona e como ele é crucial para en-
 
 #### riquecer as respostas de um modelo de IA.
@@ -2903,7 +2993,7 @@ print(f'==========={doc.metadata}\n\n')
 #### oPyPDFLoaderpara carregar os PDFs e oRecursiveCharacterTextSplitterpara dividir o
 
 #### texto em pedaços manejáveis.
-
+```
 **from** langchain_community.document_loaders.pdf **import** PyPDFLoader
 **from** langchain_text_splitters **import** RecursiveCharacterTextSplitter
 
@@ -2924,13 +3014,13 @@ separators=["\n\n", "\n", ".", " ", ""]
 )
 
 documents = recur_split.split_documents(paginas)
-
+```
 #### Criação da base de dados de vetores
 
 #### Após a divisão, os documentos são transformados em vetores usando embeddings da OpenAI e
 
 #### armazenados em umaVectorStorechamada FAISS.
-
+```
 **from** langchain_vectorstores **import** FAISS
 **from** langchain_openai.embeddings **import** OpenAIEmbeddings
 
@@ -2940,22 +3030,21 @@ documents=documents,
 
 embedding=OpenAIEmbeddings()
 )
-
+```
 ### Criando Estrutura de Conversa
 
 #### Agora que temos nossa base de dados de vetores, vamos criar uma estrutura de conversa que utilizará
 
 #### essa base para responder perguntas.
-
+```
 **from** langchain_core.prompts **import** ChatPromptTemplate
 
 prompt = ChatPromptTemplate.from_template(
 '''Responda as perguntas se baseando no contexto fornecido.
 
-```
+
 contexto: {contexto}
-```
-```
+
 pergunta: {pergunta}''')
 ```
 #### Configurando o Retriever
@@ -2965,7 +3054,7 @@ pergunta: {pergunta}''')
 #### Store de acordo com os parâmetros definidos em sua criação. Este retriever buscará os documentos
 
 #### relevantes para a pergunta feita pelo usuário:
-
+```
 **from** langchain_core.runnables **import** RunnableParallel, RunnablePassthrough
 
 retriever = vectorstore.as_retriever(search_type='mmr', search_kwargs={'k': 5,'fetch_k': 25})
@@ -2973,14 +3062,14 @@ setup = RunnableParallel({
 'pergunta': RunnablePassthrough(),
 'contexto': retriever
 })
-
+```
 #### Invocando a Estrutura de Conversa
 
 #### Agora, podemos invocar a estrutura de conversa com uma pergunta:
-
+```
 input = setup.invoke('O que é a OpenAI?')
 print(input)
-
+```
 #### A saída será um dicionário contendo a pergunta e os documentos relevantes que foram recuperados:
 
 #### {'pergunta': 'O que é a OpenAI?',
@@ -2993,7 +3082,7 @@ print(input)
 #### Para facilitar a resposta, vamos juntar os conteúdos dos documentos recuperados em uma única
 
 #### string:
-
+```
 **def** join_documents(input):
 input['contexto'] ='\n\n'.join([c.page_content **for** c **in** input['contexto']])
 **return** input
@@ -3002,20 +3091,20 @@ setup = RunnableParallel({
 'pergunta': RunnablePassthrough(),
 'contexto': retriever
 }) | join_documents
-
+```
 #### Finalizando a Chain
 
 #### Agora, podemos criar a chain final que combina a recuperação de documentos e o prompt:
-
+```
 chain = setup | prompt | ChatOpenAI()
-
+```
 #### Testando a Aplicação
 
 #### Vamos testar nossa aplicação invocando a chain com uma pergunta:
-
+```
 response = chain.invoke('O que é a OpenAI?')
 print(response)
-
+```
 #### A saída será uma resposta gerada pelo modelo, que pode incluir informações relevantes sobre a OpenAI,
 
 #### como:
